@@ -1,0 +1,20 @@
+.container{
+  display: flex;
+  gap: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 7px;
+  cursor: pointer;
+  border-radius: 6px;
+
+  &:hover{
+    background: rgba(77, 77, 77, 0.71);
+    transition: 0.2s;
+  }
+
+
+  img{
+    align-self: center;
+  }
+
+}

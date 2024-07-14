@@ -1,0 +1,24 @@
+
+<app-form  [formGroup]="registerForm" (ngSubmit)="onSubmit($event)">
+  <h1 style="text-align: center">Регистрация</h1>
+  @if(registerForm.controls['email'].invalid && registerForm.controls["email"].touched){
+    <span class="alert">Некорректный email</span>
+  }
+  <app-input formControlName="email" [placeholder]="'Email'"></app-input>
+  @if(registerForm.controls['name'].invalid && registerForm.controls["name"].touched){
+    <span class="alert">Имя должно содержать не менее 4 символов</span>
+  }
+  <app-input formControlName="name" [placeholder]="'Имя'" ></app-input>
+  @if(registerForm.controls['password'].invalid && registerForm.controls["password"].touched){
+    <span class="alert">Пароль должен содержать не менее 8 символов</span>
+  }
+  <app-input formControlName="password" [placeholder]="'Пароль'"></app-input>
+  @if(registerForm.controls['repeatPassword'].value !== registerForm.controls['password'].value && registerForm.controls["repeatPassword"].touched){
+    <span class="alert">Пароли не совпадают</span>
+  }
+  <app-input formControlName="repeatPassword" [placeholder]="'Повторите пароль'" ></app-input>
+  <a routerLink = "../login">Войти</a>
+  <app-button [disabled] = 'checkFormValid()'>
+    Зарегистрироваться
+  </app-button>
+</app-form>

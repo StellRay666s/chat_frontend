@@ -1,0 +1,17 @@
+@if (!(roomStore$ | async)?.selectedRoom) {
+  <div class="empty">
+    Выберите комнату
+  </div>
+} @else {
+  <div class="container">
+    @for (message of (roomStore$ | async)?.roomMessages; track message.id) {
+      <p class="me" [ngClass]="{'me':message.user.id === userId.getId()}">{{ message.message }}</p>
+    }
+  </div>
+  <div class="controls">
+    <textarea [(ngModel)]="value" (ngModelChange)='changed()'></textarea>
+    <button (click)="click()">Отправить</button>
+  </div>
+}
+
+

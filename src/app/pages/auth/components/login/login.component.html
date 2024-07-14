@@ -1,0 +1,13 @@
+<app-form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <h1 style="text-align: center">Авторизация</h1>
+  @if (loginForm.controls["email"].invalid && loginForm.controls["email"].touched) {
+    <span class="alert">Не корректный email</span>
+  }
+  <app-input formControlName="email" [placeholder]="'Email'" ></app-input>
+  @if (loginForm.controls["password"].invalid && loginForm.controls["password"].touched) {
+    <span class="alert">Пароль не может быть пустой</span>
+  }
+  <app-input formControlName="password" [placeholder]="'Password'"></app-input>
+    <a routerLink = "../register">Зарегистрироваться</a>
+  <app-button [disabled]="checkFormValid()" class="btn">Войти</app-button>
+</app-form>

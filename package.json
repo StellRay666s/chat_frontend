@@ -1,5 +1,5 @@
 {
-  "name": "chat-proj",
+  "name": "chat",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "^17.0.0",
     "@angular/router": "^17.0.0",
     "rxjs": "~7.8.0",
+    "socket.io-client": "^4.7.5",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
   },
@@ -34,5 +35,8 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.2.2"
-  }
+  },
+  "main": "index.js",
+  "author": "Danila Amazaryan <d.amazaryan@devkeeper.ru>",
+  "license": "MIT"
 }

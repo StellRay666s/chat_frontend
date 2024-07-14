@@ -1,0 +1,21 @@
+:host {
+  background: silver;
+  display: grid;
+  justify-content: center;
+  grid-template-columns:minmax(100px, 400px) 2fr;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.rooms{
+  align-self: start;
+  padding: 10px;
+}
+
+.chat_window{
+
+}
+
+
+

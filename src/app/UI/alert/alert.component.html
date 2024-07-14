@@ -1,0 +1,10 @@
+
+  @for ( alert of  alerts; track alert.message){
+    <div [ngClass]="alert.isShow ? 'alert open':'alert close'">
+      {{ alert.message }}
+    </div>
+  }
+
+
+
+

@@ -1,0 +1,28 @@
+:host{
+  display: grid;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.alert {
+  width: 200px;
+  height: 70px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  transition: 1s;
+  top: 20px;
+  left: 20px;
+}
+
+.open{
+  left: 20px;
+}
+.close{
+  left: -200px;
+}

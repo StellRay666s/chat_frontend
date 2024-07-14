@@ -1,0 +1,4 @@
+@for (room of (roomsList$ | async)?.roomsList;track room.id){
+  <app-room (click)="selectRoom(room.id)" [title]="room.title" [lastMessage]="room.message"  ></app-room>
+}
+
